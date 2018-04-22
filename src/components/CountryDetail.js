@@ -1,11 +1,10 @@
 import React from 'react';
 
-const CountryDetail = () => {
+const CountryDetail = (props) => {
+  if (!props.country) return null;
   return (
-    <h3>
-      Country details to go here.
-    </h3>
-  )
+    <h3>{props.country.name}</h3>
+  );
 }
 
 export default CountryDetail;
