@@ -2,4 +2,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/171351.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  color: Blue;
+}
+
+select {
+  position: relative;
+  background-color: DodgerBlue;
+  width: 30%;
+  position: absolute;
+  bottom: 600px;
+  right: 450px;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
 }
