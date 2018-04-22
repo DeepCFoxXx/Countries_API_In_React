@@ -8,7 +8,8 @@ class CountryContainer extends React.Component {
     this.state = {
       countries: [],
       currentCountry: null
-    };
+    }
+    this.handleCountrySelected = this.handleCountrySelected.bind(this);
   }
 
   componentDidMount() {
@@ -24,6 +25,11 @@ class CountryContainer extends React.Component {
     });
 
     request.send();
+  }
+
+  handleCountrySelected(index) {
+    const selectedCountry = this.state.countries[index];
+    this.setState({currentCountry: selectedCountry})
   }
 
   render(){

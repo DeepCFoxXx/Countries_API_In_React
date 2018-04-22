@@ -6,7 +6,7 @@ const CountrySelector = (props) => {
   })
 
   function handleChange(event) {
-    console.log(event.target.value);
+    props.onCountrySelected(event.target.value);
   }
 
   return (
