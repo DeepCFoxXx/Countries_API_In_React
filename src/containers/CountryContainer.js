@@ -5,7 +5,25 @@ import CountryDetail from '../components/CountryDetail.js';
 class CountryContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = {
+      countries: [],
+      currentCountry: null
+    };
+  }
+
+  componentDidMount() {
+    const url = 'https://restcountries.eu/rest/v2/all';
+    const request = new XMLHttpRequest();
+    request.open('GET', url);
+
+    request.addEventListener("load", () => {
+      if (request.status !== 200) return;
+      const jsonString = request.responseText;
+      const data = JSON.parse(jsonString);
+      this.setState({countries: data})
+    });
+
+    request.send();
   }
 
   render(){
