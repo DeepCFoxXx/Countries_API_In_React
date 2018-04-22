@@ -27,14 +27,17 @@ class CountryContainer extends React.Component {
   }
 
   render(){
-    return (
+    return(
       <div>
         <h2>Country Container</h2>
-        <CountrySelector />
-        <CountryDetail />
-      </div>
-    );
+        <CountrySelector
+          countries={this.state.countries} />
+          <CountryDetail />
+        </div>
+      );
+    }
   }
+
 }
 
 export default CountryContainer;
